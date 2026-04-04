@@ -23,7 +23,7 @@
                     <li class="nav-item"><a class="nav-link lang" href="#sobre-mi" data-es="Sobre Mí" data-en="About Me">Sobre Mí</a></li>
                     <li class="nav-item"><a class="nav-link lang" href="#skills" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
                     <li class="nav-item"><a class="nav-link lang" href="#proyectos" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
-                    <li class="nav-item"><a class="nav-link lang" href="mailto:ju.villac02@gmail.com" data-es="Contacto" data-en="Contact">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link lang" href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                         <button id="lang-toggle" class="btn btn-sm btn-outline-light fw-bold">
                             <i class="bi bi-globe me-1"></i> <span id="lang-text">EN</span>
@@ -167,16 +167,41 @@
         </div>
     </section>
 
-    <footer id="contacto" class="py-5 text-center">
+    <footer id="contacto" class="py-5">
         <div class="container border-top border-secondary pt-5">
-            <h3 class="mb-4 lang" data-es="¿Hablamos de tu próximo proyecto?" data-en="Let's talk about your next project?">¿Hablamos de tu próximo proyecto?</h3>
-            <p class="text-secondary mb-4 lang" data-es="Disponible para posiciones de Tecnología Junior / Trainee con modalidad remota." data-en="Available for Junior / Trainee Tech positions (Remote).">Disponible para posiciones de Tecnología Junior / Trainee con modalidad presencial (Concepción, Chile) o remota.</p>
-            <div class="fs-1 mb-4 d-flex justify-content-center gap-4">
-                <a href="https://github.com/JuVillaC" target="_blank" class="text-white" title="GitHub"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/juanvillacrisosto" target="_blank" class="text-white" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="mailto:ju.villac02@gmail.com" class="text-white" title="Email"><i class="bi bi-envelope-at"></i></a>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h2 class="fw-bold mb-4 lang" data-es="¿Hablamos de tu próximo proyecto?" data-en="Let's talk about your next project?">¿Hablamos de tu próximo proyecto?</h2>
+                    <p class="text-secondary mb-4 lang" data-es="Disponible para posiciones de Tecnología Junior / Trainee con modalidad remota. Envíame un mensaje y te responderé lo antes posible." data-en="Available for Junior / Trainee Tech positions (Remote). Send me a message and I'll reply as soon as possible.">Disponible para posiciones de Tecnología Junior / Trainee con modalidad remota. Envíame un mensaje y te responderé lo antes posible.</p>
+                    <div class="fs-1 mb-4 d-flex justify-content-center justify-content-lg-start gap-4">
+                        <a href="https://github.com/JuVillaC" target="_blank" class="text-white hover-accent" title="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/juanvillacrisosto" target="_blank" class="text-white hover-accent" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:ju.villac02@gmail.com" class="text-white hover-accent" title="Email Directo"><i class="bi bi-envelope-at"></i></a>
+                    </div>
+                </div>
+                    
+                <div class="col-lg-6">
+                    <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" class="bg-darker p-4 rounded border border-secondary shadow-lg">
+                        <div class="mb-3 text-start">
+                            <label for="name" class="form-label text-white fw-bold lang" data-es="Nombre" data-en="Name">Nombre</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="email" class="form-label text-white fw-bold lang" data-es="Correo Electrónico" data-en="Email">Correo Electrónico</label>
+                            <input type="email" class="form-control bg-dark text-white border-secondary" id="email" name="email" required>
+                        </div>
+                        <div class="mb-4 text-start">
+                            <label for="message" class="form-label text-white fw-bold lang" data-es="Mensaje" data-en="Message">Mensaje</label>
+                            <textarea class="form-control bg-dark text-white border-secondary" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 fw-bold lang" data-es="Enviar Mensaje" data-en="Send Message">Enviar Mensaje</button>
+                    </form>
+                </div>
             </div>
-            <p class="text-muted small lang" data-es="© 2026 | Juan Villa Crisosto | Soluciones Digitales Seguras" data-en="© 2026 | Juan Villa Crisosto | Secure Digital Solutions">© 2026 | Juan Villa Crisosto | Soluciones Digitales Seguras</p>
+                
+            <div class="text-center mt-5 pt-4">
+                <p class="text-muted small lang" data-es="© 2026 | Juan Villa Crisosto | Soluciones Digitales Seguras" data-en="© 2026 | Juan Villa Crisosto | Secure Digital Solutions">© 2026 | Juan Villa Crisosto | Soluciones Digitales Seguras</p>
+            </div>
         </div>
     </footer>
 
