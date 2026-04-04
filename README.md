@@ -1,51 +1,51 @@
-# 🎓 Portfolio Profesional Integrador - Juan Villa Crisosto
+# 👨‍💻 Juan Villa Crisosto | Full Stack Developer & Cybersecurity Specialist
 
-Este repositorio contiene el código fuente de mi portafolio digital, desarrollado para el módulo **"Desarrollo de un Portafolio de un Producto Digital"**. El objetivo de este proyecto es consolidar mi perfil profesional y prepararme estratégicamente para el mercado laboral IT.
+Bienvenido a mi espacio profesional. Soy un desarrollador enfocado en la construcción de soluciones tecnológicas integrales, combinando la robustez del desarrollo **Full Stack** con una visión analítica en **Ciberseguridad y Telecomunicaciones**. Mi objetivo es desarrollar software que no solo sea funcional, sino también seguro y eficiente desde su arquitectura.
 
-## 🔗 Enlace al Portafolio en Vivo
-👉 **[VER MI PORTAFOLIO DIGITAL AQUÍ](https://tu-usuario.github.io/)**
-
----
-
-## 🎯 Objetivo de la Entrega
-Mostrar de forma clara y atractiva una experiencia técnica concreta que refleje mis aprendizajes y herramientas desarrolladas. Este portafolio proyecta mi perfil como **Full Stack Developer** con especialización en **Ciberseguridad y Telecomunicaciones**.
+## 🔗 Portafolio en Vivo
+👉 **[EXPLORA MI PORTAFOLIO DIGITAL AQUÍ](https://juvillac.github.io/)**
 
 ---
 
-## 📂 Contenido del Portafolio
-Siguiendo los requerimientos de evaluación, el sitio web integra las siguientes secciones:
+## 🎯 Perfil Profesional
+Cuento con una formación sólida en el ecosistema de **Java y Python**, orientada a la creación de aplicaciones escalables y la protección proactiva de datos transaccionales. Mi formación complementaria en redes y seguridad me permite entender el ciclo de vida del desarrollo desde la infraestructura hasta la interfaz de usuario.
 
-### 1. Gestión de Proyectos  
-Presentación de tres productos desarrollados durante el curso:
-* **Alke-Wallet Application:** Billetera digital Full Stack (Caso de Estudio).
-* **SpringEdu Manager:** Sistema de matrículas con Spring Boot y Security.
-* **Biblioteca Digital Untec:** Lógica de persistencia y POO en Java Core.
+---
 
-### 2. Caso de Estudio Técnico: Alke-Wallet  
-Sección diferenciada y nombrada dentro del portafolio que incluye:
-* **Descripción y Desafío:** Tarea realizada y el obstáculo principal enfrentado.
-* **Solución y Herramientas:** Propuesta técnica y tecnologías utilizadas.
-* **Impacto y Aprendizaje:** Métricas de éxito y conocimientos alcanzados.
-* **Justificación:** Argumento de por qué este proyecto es representativo de mi crecimiento técnico.
+## 📂 Proyectos Destacados
+Presentación de soluciones técnicas que reflejan mi crecimiento y dominio de herramientas modernas:
 
-### 3. Análisis FODA Personal   
-Matriz de análisis personal que destaca:
-* **Interno:** 5 Fortalezas y 5 Áreas de oportunidad (Debilidades).
-* **Externo:** 5 Oportunidades y 5 Amenazas del mercado laboral IT actual.
+* **Alke-Wallet Application:** Una solución Fintech orientada a la gestión financiera con altos estándares de integridad.
+* **SpringEdu Manager:** Sistema de gestión académica que implementa protocolos avanzados de autenticación y seguridad.
+* **Biblioteca Digital Untec:** Aplicación centrada en la lógica de persistencia y la arquitectura de objetos en Java.
+
+---
+
+## 🛡️ Análisis Técnico: Caso de Estudio (Alke-Wallet)
+He dedicado una sección especial en mi portafolio para desglosar este proyecto, donde explico mi capacidad para resolver desafíos complejos:  
+* **El Reto:** Garantizar la seguridad y consistencia de datos en transferencias en tiempo real.
+* **La Solución:** Implementación de arquitectura MVC con validaciones de servidor estrictas y herramientas técnicas avanzadas.
+* **Resultados:** Logro de métricas de alto rendimiento y una base de datos 100% consistente bajo pruebas de estrés.
+
+---
+
+## 📊 Análisis Estratégico de Perfil
+Mantengo un análisis constante de mi evolución profesional para asegurar que mis habilidades se alineen con las necesidades del mercado IT actual:
+* **Fortalezas:** Perfil políglota (Java/Python) y mentalidad "Security First".
+* **Enfoque de Mejora:** Especialización continua en arquitecturas Cloud y optimización de procesos técnicos.
 
 ---
 
 ## 🛠️ Stack Tecnológico
-Para la construcción de este portafolio y los proyectos presentados se utilizaron:
-* **Lenguajes:** Java 21, Python, JavaScript, HTML5, CSS3.
-* **Frameworks:** Spring Boot 3, Django, Bootstrap 5.
-* **Seguridad y Redes:** Conocimientos en protocolos de telecomunicaciones y ciberseguridad.
+* ]**Backend:** Java 21 (Spring Boot 3), Python (Django), SQL.
+* **Frontend:** JavaScript, HTML5, CSS3, Bootstrap 5.
+* **Infraestructura:** Protocolos de telecomunicaciones y ciberseguridad aplicada.
 
 ---
 
 ## ✉️ Contacto
-* **LinkedIn:** [Ver mi perfil](www.linkedin.com/in/juanvillacrisosto)
-* **GitHub:** [Ver mi perfil](https://github.com/JuVillaC)
+* **LinkedIn:** [juanvillacrisosto](https://www.linkedin.com/in/juanvillacrisosto)
+* **GitHub:** [JuVillaC](https://github.com/JuVillaC)
 
 ---
 *Comprometido con la excelencia técnica y el desarrollo de soluciones digitales seguras.*
