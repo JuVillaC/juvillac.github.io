@@ -138,3 +138,22 @@ footer a:hover {
 .skill-box i, .project-card i {
     transition: all 0.3s ease;
 }
+
+/* Efecto hover para iconos de contacto */
+.hover-accent {
+    transition: 0.3s ease;
+    opacity: 0.8;
+}
+.hover-accent:hover {
+    color: var(--accent-color) !important;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Estilos para el formulario en Dark Mode */
+.form-control:focus {
+    background-color: #161b22;
+    color: var(--text-main);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
