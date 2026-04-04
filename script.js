@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Animación de entrada para las tarjetas
+    // Animación de entrada
     const elementsToAnimate = document.querySelectorAll('.project-card, .skill-box, .profile-img-container');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -19,53 +19,84 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Barra de Progreso de Scroll
     const scrollProgress = document.getElementById('scroll-progress');
-    window.addEventListener('scroll', () => {
-        const totalScroll = document.documentElement.scrollTop;
-        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scroll = `${totalScroll / windowHeight * 100}%`;
-        scrollProgress.style.width = scroll;
+    if (scrollProgress) {
+        window.addEventListener('scroll', () => {
+            const totalScroll = document.documentElement.scrollTop;
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scroll = `${totalScroll / windowHeight * 100}%`;
+            scrollProgress.style.width = scroll;
+        });
+    }
+
+    // Lógica de Traducción (Español / Inglés)
+    const langToggle = document.getElementById('lang-toggle');
+    const langText = document.getElementById('lang-text');
+    let currentLang = 'es'; // Idioma por defecto
+
+    const typewriterDict = {
+        es: ["Full Stack Developer", "Especialista en Ciberseguridad", "Entusiasta de Cloud & AWS"],
+        en: ["Full Stack Developer", "Cybersecurity Specialist", "Cloud & AWS Enthusiast"]
+    };
+
+    let words = typewriterDict[currentLang];
+
+    langToggle.addEventListener('click', () => {
+        // Alternar idioma
+        currentLang = currentLang === 'es' ? 'en' : 'es';
+        // Cambiar el texto del botón al idioma contrario para indicar la opción
+        langText.innerText = currentLang === 'es' ? 'EN' : 'ES';
+
+        // Reemplazar todos los textos con clase 'lang'
+        document.querySelectorAll('.lang').forEach(el => {
+            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+        });
+
+        // Actualizar palabras del Typewriter
+        words = typewriterDict[currentLang];
     });
 
     // Efecto Máquina de Escribir
-    const words = ["Full Stack Developer", "Especialista en Ciberseguridad", "Entusiasta de Cloud & AWS"];
-    let i = 0;
-    let timer;
-    
-    function typingEffect() {
-        let word = words[i].split("");
-        var loopTyping = function() {
-            if (word.length > 0) {
-                document.getElementById('typewriter').innerHTML += word.shift();
-            } else {
-                setTimeout(deletingEffect, 2000); // Espera 2 segundos antes de borrar
-                return false;
-            }
-            timer = setTimeout(loopTyping, 100); // Velocidad de escritura
-        };
-        loopTyping();
-    }
-
-    function deletingEffect() {
-        let word = words[i].split("");
-        var loopDeleting = function() {
-            if (word.length > 0) {
-                word.pop();
-                document.getElementById('typewriter').innerHTML = word.join("");
-            } else {
-                if (words.length > (i + 1)) {
-                    i++;
+    const typeWriterElement = document.getElementById('typewriter');
+    if (typeWriterElement) {
+        let i = 0;
+        let timer;
+        
+        function typingEffect() {
+            // Se asegura de que si se cambió de idioma y el array es más corto, no se rompa
+            if (i >= words.length) i = 0; 
+            
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    typeWriterElement.innerHTML += word.shift();
                 } else {
-                    i = 0; // Vuelve al inicio del array
+                    setTimeout(deletingEffect, 2000);
+                    return false;
                 }
-                setTimeout(typingEffect, 500); // Espera medio segundo antes de escribir la siguiente
-                return false;
-            }
-            timer = setTimeout(loopDeleting, 50); // Velocidad de borrado
-        };
-        loopDeleting();
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = typeWriterElement.innerHTML.split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    typeWriterElement.innerHTML = word.join("");
+                } else {
+                    i++;
+                    if (i >= words.length) i = 0;
+                    setTimeout(typingEffect, 500);
+                    return false;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+
+        typingEffect();
     }
 
-    typingEffect(); // Inicia el efecto
-
-    console.log("Perfil Profesional de Juan Villa Crisosto cargado. Interacciones Front-End activas.");
+    console.log("Portafolio Bilingüe de Juan Villa Crisosto cargado correctamente.");
 });
