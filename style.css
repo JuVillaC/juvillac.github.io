@@ -102,3 +102,39 @@ footer a:hover {
     opacity: 1;
     transform: scale(1.1);
 }
+
+/* Barra de progreso de Scroll */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: var(--accent-color);
+    z-index: 9999;
+    box-shadow: 0 0 10px var(--accent-color);
+    transition: width 0.1s ease-out;
+}
+
+/* Efecto Máquina de escribir - Cursor parpadeante */
+.type-cursor {
+    color: var(--accent-color);
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Glow Effect Avanzado para íconos al pasar el mouse */
+.skill-box:hover i, .project-card:hover i {
+    color: var(--accent-color) !important;
+    text-shadow: 0 0 15px rgba(13, 110, 253, 0.8);
+    transform: scale(1.15) translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.skill-box i, .project-card i {
+    transition: all 0.3s ease;
+}
