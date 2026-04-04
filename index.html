@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="scroll-progress" id="scroll-progress"></div>
+
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">&lt;JUAN.VILLA.CRISOSTO /&gt;</a>
@@ -17,11 +19,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#proyectos">Portafolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link lang" href="#sobre-mi" data-es="Sobre Mí" data-en="About Me">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link lang" href="#skills" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link lang" href="#proyectos" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link lang" href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button id="lang-toggle" class="btn btn-sm btn-outline-light fw-bold">
+                            <i class="bi bi-globe me-1"></i> <span id="lang-text">EN</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -30,19 +37,23 @@
     <header class="hero-section d-flex align-items-center">
         <div class="container text-center">
             <h1 class="display-2 fw-bold mb-3">Juan Villa Crisosto</h1>
+            
             <div class="lead mb-4 fs-3">
                 > <span id="typewriter" class="text-white fw-bold"></span><span class="type-cursor">|</span>
             </div>
             
-            <p class="text-secondary mx-auto mb-5" style="max-width: 800px;">
+            <p class="text-secondary mx-auto mb-5 lang" style="max-width: 800px;" 
+               data-es="Desarrollo de soluciones tecnológicas escalables con un enfoque prioritario en la seguridad de la información. Especialista en arquitecturas Java/Spring y automatización con Python."
+               data-en="Developing scalable technological solutions with a priority focus on information security. Specialist in Java/Spring architectures and Python automation.">
                 Desarrollo de soluciones tecnológicas escalables con un enfoque prioritario en la seguridad de la información. 
                 Especialista en arquitecturas Java/Spring y automatización con Python.
             </p>
+            
             <div class="d-flex justify-content-center gap-3 flex-wrap">
                 <a href="CV_Juan_Villa_Crisosto.pdf" download="CV_Juan_Villa_Crisosto.pdf" class="btn btn-outline-light btn-lg px-4">
-                    <i class="bi bi-file-earmark-pdf-fill me-2"></i>Descargar CV
+                    <i class="bi bi-file-earmark-pdf-fill me-2"></i><span class="lang" data-es="Descargar CV" data-en="Download Resume">Descargar CV</span>
                 </a>
-                <a href="#proyectos" class="btn btn-outline-light btn-lg px-4">Explorar Proyectos</a>
+                <a href="#proyectos" class="btn btn-outline-light btn-lg px-4 lang" data-es="Explorar Proyectos" data-en="Explore Projects">Explorar Proyectos</a>
                 <a href="https://github.com/JuVillaC" target="_blank" class="btn btn-outline-light btn-lg px-4">GitHub</a>
                 <a href="https://www.linkedin.com/in/juanvillacrisosto" target="_blank" class="btn btn-outline-light btn-lg px-4">LinkedIn</a>
             </div>
@@ -58,12 +69,16 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <h2 class="fw-bold mb-3">Sobre Mí</h2>
-                    <h5 class="text-primary mb-4">Conectando el Desarrollo con la Seguridad</h5>
-                    <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
+                    <h2 class="fw-bold mb-3 lang" data-es="Sobre Mí" data-en="About Me">Sobre Mí</h2>
+                    <h5 class="text-primary mb-4 lang" data-es="Conectando el Desarrollo con la Seguridad" data-en="Bridging Development and Security">Conectando el Desarrollo con la Seguridad</h5>
+                    <p class="text-secondary lang" style="font-size: 1.1rem; line-height: 1.8;"
+                       data-es="Soy un desarrollador apasionado por la tecnología, con una base sólida en el ecosistema <strong>Java y Python</strong>. Mi formación en <strong>Telecomunicaciones y Ciberseguridad</strong> me permite entender el software de manera integral: no solo desde la lógica de negocio en el código, sino también desde su arquitectura de red y vulnerabilidades."
+                       data-en="I am a developer passionate about technology, with a solid foundation in the <strong>Java and Python</strong> ecosystem. My background in <strong>Telecommunications and Cybersecurity</strong> allows me to understand software holistically: not just from the business logic in the code, but also from its network architecture and vulnerabilities.">
                         Soy un desarrollador apasionado por la tecnología, con una base sólida en el ecosistema <strong>Java y Python</strong>. Mi formación en <strong>Telecomunicaciones y Ciberseguridad</strong> me permite entender el software de manera integral: no solo desde la lógica de negocio en el código, sino también desde su arquitectura de red y vulnerabilidades.
                     </p>
-                    <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
+                    <p class="text-secondary lang" style="font-size: 1.1rem; line-height: 1.8;"
+                       data-es="Me caracterizo por ser una persona analítica, orientada a la resolución de problemas y en constante aprendizaje. Busco mi primera oportunidad laboral donde pueda aportar valor escribiendo código limpio y seguro, mientras sigo creciendo profesionalmente en la industria TI."
+                       data-en="I am an analytical person, problem-solving oriented, and constantly learning. I am looking for my first professional opportunity where I can add value by writing clean and secure code, while continuing to grow professionally in the IT industry.">
                         Me caracterizo por ser una persona analítica, orientada a la resolución de problemas y en constante aprendizaje. Busco mi primera oportunidad laboral donde pueda aportar valor escribiendo código limpio y seguro, mientras sigo creciendo profesionalmente en la industria TI.
                     </p>
                 </div>
@@ -73,34 +88,34 @@
 
     <section id="skills" class="py-5">
         <div class="container text-center">
-            <h2 class="section-title">Habilidades Técnicas</h2>
-            <p class="text-secondary mb-5">Herramientas y tecnologías que domino para construir soluciones eficientes.</p>
+            <h2 class="section-title lang" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h2>
+            <p class="text-secondary mb-5 lang" data-es="Herramientas y tecnologías que domino para construir soluciones eficientes." data-en="Tools and technologies I master to build efficient solutions.">Herramientas y tecnologías que domino para construir soluciones eficientes.</p>
             <div class="row g-4">
                 <div class="col-md-3">
                     <div class="skill-box p-4 rounded bg-darker h-100">
                         <i class="bi bi-window-fullscreen fs-1 text-primary mb-3 d-block"></i>
-                        <h5 class="fw-bold text-white">Frontend</h5>
+                        <h5 class="fw-bold text-white lang" data-es="Frontend" data-en="Frontend">Frontend</h5>
                         <p class="small text-secondary mb-0">HTML, CSS, JavaScript, Bootstrap.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="skill-box p-4 rounded bg-darker h-100">
                         <i class="bi bi-hdd-network fs-1 text-primary mb-3 d-block"></i>
-                        <h5 class="fw-bold text-white">Backend</h5>
+                        <h5 class="fw-bold text-white lang" data-es="Backend" data-en="Backend">Backend</h5>
                         <p class="small text-secondary mb-0">Java, Spring Boot, Python.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="skill-box p-4 rounded bg-darker h-100">
                         <i class="bi bi-database-check fs-1 text-primary mb-3 d-block"></i>
-                        <h5 class="fw-bold text-white">Data & Tools</h5>
+                        <h5 class="fw-bold text-white lang" data-es="Data & Tools" data-en="Data & Tools">Data & Tools</h5>
                         <p class="small text-secondary mb-0">MySQL, PostgreSQL, Git, GitHub.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="skill-box p-4 rounded bg-darker h-100">
                         <i class="bi bi-cloud-arrow-up fs-1 text-primary mb-3 d-block"></i>
-                        <h5 class="fw-bold text-white">Cloud & Seguridad</h5>
+                        <h5 class="fw-bold text-white lang" data-es="Cloud & Seguridad" data-en="Cloud & Security">Cloud & Seguridad</h5>
                         <p class="small text-secondary mb-0">AWS, Ciberseguridad, Arquitectura de Red.</p>
                     </div>
                 </div>
@@ -110,17 +125,17 @@
 
     <section id="proyectos" class="py-5 bg-darker">
         <div class="container">
-            <h2 class="section-title">Proyectos Destacados</h2>
+            <h2 class="section-title lang" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="project-card h-100">
                         <div class="mb-3"><i class="bi bi-shield-lock text-primary fs-1"></i></div>
                         <h5>SpringEdu Manager</h5>
-                        <p class="text-secondary small">Sistema de gestión académica con implementación de seguridad robusta y arquitecturas escalables.</p>
+                        <p class="text-secondary small lang" data-es="Sistema de gestión académica con implementación de seguridad robusta y arquitecturas escalables." data-en="Academic management system with robust security implementation and scalable architectures.">Sistema de gestión académica con implementación de seguridad robusta y arquitecturas escalables.</p>
                         <div class="mt-auto">
                             <span class="badge bg-dark mb-3">Java</span> <span class="badge bg-dark mb-3">Spring Boot</span>
                             <br>
-                            <a href="https://github.com/JuVillaC" target="_blank" class="btn btn-sm btn-primary w-100">Ver Repositorio</a>
+                            <a href="https://github.com/JuVillaC" target="_blank" class="btn btn-sm btn-primary w-100 lang" data-es="Ver Repositorio" data-en="View Repository">Ver Repositorio</a>
                         </div>
                     </div>
                 </div>
@@ -128,11 +143,11 @@
                     <div class="project-card h-100">
                         <div class="mb-3"><i class="bi bi-wallet2 text-primary fs-1"></i></div>
                         <h5>Alke-Wallet App</h5>
-                        <p class="text-secondary small">Plataforma Fintech Full Stack enfocada en la integridad transaccional y optimización de latencia.</p>
+                        <p class="text-secondary small lang" data-es="Plataforma Fintech Full Stack enfocada en la integridad transaccional y optimización de latencia." data-en="Full Stack Fintech platform focused on transactional integrity and latency optimization.">Plataforma Fintech Full Stack enfocada en la integridad transaccional y optimización de latencia.</p>
                         <div class="mt-auto">
                             <span class="badge bg-dark mb-3">Java</span> <span class="badge bg-dark mb-3">Full Stack</span>
                             <br>
-                            <a href="https://github.com/JuVillaC/Alke-Wallet-Application" target="_blank" class="btn btn-sm btn-primary w-100">Ver Repositorio</a>
+                            <a href="https://github.com/JuVillaC/Alke-Wallet-Application" target="_blank" class="btn btn-sm btn-primary w-100 lang" data-es="Ver Repositorio" data-en="View Repository">Ver Repositorio</a>
                         </div>
                     </div>
                 </div>
@@ -140,11 +155,11 @@
                     <div class="project-card h-100">
                         <div class="mb-3"><i class="bi bi-book text-primary fs-1"></i></div>
                         <h5>Biblioteca Digital Untec</h5>
-                        <p class="text-secondary small">Gestión de inventarios mediante lógica de objetos avanzada y persistencia de datos relacional.</p>
+                        <p class="text-secondary small lang" data-es="Gestión de inventarios mediante lógica de objetos avanzada y persistencia de datos relacional." data-en="Inventory management using advanced object logic and relational data persistence.">Gestión de inventarios mediante lógica de objetos avanzada y persistencia de datos relacional.</p>
                         <div class="mt-auto">
                             <span class="badge bg-dark mb-3">Java Core</span> <span class="badge bg-dark mb-3">MySQL</span>
                             <br>
-                            <a href="https://github.com/JuVillaC/Biblioteca-Digital-Untec" target="_blank" class="btn btn-sm btn-primary w-100">Ver Repositorio</a>
+                            <a href="https://github.com/JuVillaC/Biblioteca-Digital-Untec" target="_blank" class="btn btn-sm btn-primary w-100 lang" data-es="Ver Repositorio" data-en="View Repository">Ver Repositorio</a>
                         </div>
                     </div>
                 </div>
@@ -154,14 +169,14 @@
 
     <footer id="contacto" class="py-5 text-center">
         <div class="container border-top border-secondary pt-5">
-            <h3 class="mb-4">¿Hablamos de tu próximo proyecto?</h3>
-            <p class="text-secondary mb-4">Disponible para posiciones de Tecnología Junior / Trainee con modalidad presencial (en Concepción, Chile) o remota.</p>
+            <h3 class="mb-4 lang" data-es="¿Hablamos de tu próximo proyecto?" data-en="Let's talk about your next project?">¿Hablamos de tu próximo proyecto?</h3>
+            <p class="text-secondary mb-4 lang" data-es="Disponible para posiciones de Tecnología Junior / Trainee con modalidad remota." data-en="Available for Junior / Trainee Tech positions (Remote).">Disponible para posiciones de Tecnología Junior / Trainee con modalidad presencial (Concepción, Chile) o remota.</p>
             <div class="fs-1 mb-4 d-flex justify-content-center gap-4">
                 <a href="https://github.com/JuVillaC" target="_blank" class="text-white" title="GitHub"><i class="bi bi-github"></i></a>
                 <a href="https://www.linkedin.com/in/juanvillacrisosto" target="_blank" class="text-white" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="mailto:ju.villac02@gmail.com" class="text-white" title="Enviar Correo"><i class="bi bi-envelope-at"></i></a>
+                <a href="mailto:ju.villac02@gmail.com" class="text-white" title="Email"><i class="bi bi-envelope-at"></i></a>
             </div>
-            <p class="text-muted small">© 2026 | Juan Villa Crisosto | Soluciones Digitales Seguras</p>
+            <p class="text-muted small lang" data-es="© 2026 | Juan Villa Crisosto | Soluciones Digitales Seguras" data-en="© 2026 | Juan Villa Crisosto | Secure Digital Solutions">© 2026 | Juan Villa Crisosto | Soluciones Digitales Seguras</p>
         </div>
     </footer>
 
