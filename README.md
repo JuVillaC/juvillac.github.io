@@ -8,7 +8,7 @@ Este repositorio contiene el código fuente de mi portafolio digital, desarrolla
 ---
 
 ## 🎯 Objetivo de la Entrega
-Mostrar de forma clara y atractiva una experiencia técnica concreta que refleje mis aprendizajes y herramientas desarrolladas[cite: 51]. [cite_start]Este portafolio proyecta mi perfil como **Full Stack Developer** con especialización en **Ciberseguridad y Telecomunicaciones**.
+Mostrar de forma clara y atractiva una experiencia técnica concreta que refleje mis aprendizajes y herramientas desarrolladas. Este portafolio proyecta mi perfil como **Full Stack Developer** con especialización en **Ciberseguridad y Telecomunicaciones**.
 
 ---
 
