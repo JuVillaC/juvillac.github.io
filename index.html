@@ -18,9 +18,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
                     <li class="nav-item"><a class="nav-link" href="#proyectos">Portafolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#estrategia">Estrategia</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
             </div>
@@ -43,9 +43,68 @@
         </div>
     </header>
 
-    <section id="proyectos" class="py-5">
+    <section id="sobre-mi" class="py-5 bg-darker">
         <div class="container">
-            <h2 class="section-title">Portafolio Técnico</h2>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4 text-center">
+                    <div class="profile-img-container mx-auto">
+                        <i class="bi bi-person-bounding-box text-primary" style="font-size: 8rem;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-3">Sobre Mí</h2>
+                    <h5 class="text-primary mb-4">Conectando el Desarrollo con la Seguridad</h5>
+                    <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
+                        Soy un desarrollador apasionado por la tecnología, con una base sólida en el ecosistema <strong>Java y Python</strong>. Mi formación en <strong>Telecomunicaciones y Ciberseguridad</strong> me permite entender el software de manera integral, no solo desde la lógica de negocio en el código, sino también desde su arquitectura de red y vulnerabilidades.
+                    </p>
+                    <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
+                        Me caracterizo por ser una persona analítica, orientada a la resolución de problemas y en constante aprendizaje. Busco mi primera oportunidad laboral donde pueda aportar valor escribiendo código limpio y seguro, mientras sigo creciendo profesionalmente en la industria TI.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <p class="text-secondary mb-5">Herramientas y tecnologías que domino para construir soluciones eficientes.</p>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="skill-box p-4 rounded bg-darker h-100">
+                        <i class="bi bi-window-fullscreen fs-1 text-primary mb-3 d-block"></i>
+                        <h5 class="fw-bold text-white">Frontend</h5>
+                        <p class="small text-secondary mb-0">HTML, CSS, JavaScript, Bootstrap.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-box p-4 rounded bg-darker h-100">
+                        <i class="bi bi-hdd-network fs-1 text-primary mb-3 d-block"></i>
+                        <h5 class="fw-bold text-white">Backend</h5>
+                        <p class="small text-secondary mb-0">Java, Spring Boot, Python.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-box p-4 rounded bg-darker h-100">
+                        <i class="bi bi-database-check fs-1 text-primary mb-3 d-block"></i>
+                        <h5 class="fw-bold text-white">Data & Tools</h5>
+                        <p class="small text-secondary mb-0">MySQL, PostgreSQL, Git, GitHub.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-box p-4 rounded bg-darker h-100">
+                        <i class="bi bi-cloud-arrow-up fs-1 text-primary mb-3 d-block"></i>
+                        <h5 class="fw-bold text-white">Cloud & Seguridad</h5>
+                        <p class="small text-secondary mb-0">AWS, Ciberseguridad, Arquitectura de Red.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="py-5 bg-darker">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="project-card h-100">
@@ -81,39 +140,6 @@
                             <br>
                             <a href="https://github.com/JuVillaC/Biblioteca-Digital-Untec" target="_blank" class="btn btn-sm btn-primary w-100">Ver Repositorio</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="estrategia" class="py-5 bg-darker">
-        <div class="container text-center">
-            <h2 class="section-title">Análisis de Perfil Profesional</h2>
-            <p class="text-secondary mb-5 small">Evaluación de competencias para la adaptación en entornos dinámicos.</p>
-            <div class="row g-3">
-                <div class="col-md-3">
-                    <div class="foda-box">
-                        <h6 class="text-primary">Fortalezas</h6>
-                        <p class="small">Perfil Políglota (Java/Python), Mentalidad de Seguridad, Capacidad Analítica.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foda-box">
-                        <h6 class="text-primary">Debilidades</h6>
-                        <p class="small">Experiencia en entornos de producción masiva, Perfeccionamiento de inglés técnico.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foda-box">
-                        <h6 class="text-primary">Oportunidades</h6>
-                        <p class="small">Alta demanda en sector Fintech y roles especializados en DevSecOps.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="foda-box">
-                        <h6 class="text-primary">Amenazas</h6>
-                        <p class="small">Saturación de perfiles técnicos generalistas, Evolución acelerada de ciberataques.</p>
                     </div>
                 </div>
             </div>
