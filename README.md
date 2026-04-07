@@ -21,14 +21,6 @@ Presentación de soluciones técnicas que reflejan mi crecimiento y dominio de h
 
 ---
 
-## 🛡️ Análisis Técnico: Caso de Estudio (Alke-Wallet)
-He dedicado una sección especial en mi portafolio para desglosar este proyecto, donde explico mi capacidad para resolver desafíos complejos:  
-* **El Reto:** Garantizar la seguridad y consistencia de datos en transferencias en tiempo real.
-* **La Solución:** Implementación de arquitectura MVC con validaciones de servidor estrictas y herramientas técnicas avanzadas.
-* **Resultados:** Logro de métricas de alto rendimiento y una base de datos 100% consistente bajo pruebas de estrés.
-
----
-
 ## 📊 Análisis Estratégico de Perfil
 Mantengo un análisis constante de mi evolución profesional para asegurar que mis habilidades se alineen con las necesidades del mercado IT actual:
 * **Fortalezas:** Perfil políglota (Java/Python) y mentalidad "Security First".
@@ -37,7 +29,7 @@ Mantengo un análisis constante de mi evolución profesional para asegurar que m
 ---
 
 ## 🛠️ Stack Tecnológico
-* ]**Backend:** Java 21 (Spring Boot 3), Python (Django), SQL.
+* **Backend:** Java 21 (Spring Boot 3), Python (Django), SQL.
 * **Frontend:** JavaScript, HTML5, CSS3, Bootstrap 5.
 * **Infraestructura:** Protocolos de telecomunicaciones y ciberseguridad aplicada.
 
