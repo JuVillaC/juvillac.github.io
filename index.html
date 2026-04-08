@@ -128,26 +128,32 @@
         <div class="container">
             <h2 class="section-title lang" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
             <div class="row g-4">
-                <div class="col-md-6 mb-5">
-                    <div class="project-item border-bottom pb-4 h-100 d-flex flex-column">
-                        <div class="img-wrapper mb-3" style="border-radius: 8px; overflow: hidden; background-color: #f8f9fa;">
-                            <img src="img/clprog-preview.jpg" class="img-fluid w-100" alt="CL.PROG 2027" style="filter: grayscale(100%); transition: filter 0.4s ease;">
+               <div class="col-md-6 mb-4">
+                    <div class="project-card h-100">
+                        <div class="img-wrapper mb-3" style="border-radius: 12px; overflow: hidden; background-color: #1a2333;">
+                            <img src="img/clprog-preview.jpg" class="img-fluid w-100" alt="CL.PROG 2027" style="filter: grayscale(100%); transition: all 0.4s ease; opacity: 0.8;">
                         </div>
-                
+                        
+                        <div class="mb-3"><i class="bi bi-music-note-beamed text-primary fs-1"></i></div>
+                        
                         <h3 class="fw-bold mb-2">CL.PROG 2027</h3>
-                        <p class="text-muted mb-3" style="font-size: 0.95rem; line-height: 1.6;">
-                            Landing page inmersiva para festival de música progresiva. Implementación de una arquitectura <strong>Full Stack (BaaS)</strong> para la gestión de leads y postulaciones de bandas en tiempo real.
+                        
+                        <p class="text-secondary small lang" 
+                           data-es="Landing page inmersiva para festival de música. Arquitectura Full Stack (BaaS) con Supabase para gestión de leads y postulaciones en tiempo real." 
+                           data-en="Immersive landing page for a music festival. Full Stack (BaaS) architecture with Supabase for real-time lead and band application management.">
+                           Landing page inmersiva para festival de música. Arquitectura Full Stack (BaaS) con Supabase para gestión de leads y postulaciones en tiempo real.
                         </p>
                 
-                        <div class="d-flex gap-2 mb-4 flex-wrap">
-                            <small class="text-uppercase tracking-widest border px-2 py-1" style="font-size: 0.7rem; letter-spacing: 1px;">Supabase</small>
-                            <small class="text-uppercase tracking-widest border px-2 py-1" style="font-size: 0.7rem; letter-spacing: 1px;">Bootstrap 5</small>
-                            <small class="text-uppercase tracking-widest border px-2 py-1" style="font-size: 0.7rem; letter-spacing: 1px;">JavaScript ES6</small>
-                        </div>
-                
                         <div class="mt-auto">
-                            <a href="https://clprog-juanvilla.netlify.app/" target="_blank" class="text-dark fw-bold text-decoration-none me-4" style="font-size: 0.85rem; border-bottom: 2px solid #000;">VER PROYECTO</a>
-                            <a href="https://github.com/JuVillaC/clprog-2027" target="_blank" class="text-muted text-decoration-none" style="font-size: 0.85rem;">CÓDIGO GITHUB</a>
+                            <div class="mb-3">
+                                <span class="badge bg-dark">Supabase DB</span> 
+                                <span class="badge bg-dark">JS ES6</span>
+                                <span class="badge bg-dark">Bootstrap 5</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a href="https://juvillac.github.io/clprog-2027/" target="_blank" class="btn btn-sm btn-primary flex-fill fw-bold lang" data-es="Ver Demo" data-en="Live Demo">Ver Demo</a>
+                                <a href="https://github.com/JuVillaC/clprog-2027" target="_blank" class="btn btn-sm btn-outline-light flex-fill fw-bold">GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </div>
