@@ -1,98 +1,102 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Animación de entrada con Intersection Observer
-    const elementsToAnimate = document.querySelectorAll('.project-card, .skill-box, .profile-img-container');
+    
+    // 1. Animaciones de aparición al hacer scroll
+    const observerOptions = {
+        threshold: 0.1
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    elementsToAnimate.forEach(el => {
-        el.style.opacity = 0;
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.8s ease-out';
+    document.querySelectorAll('.project-card, .skill-box, .section-title, .profile-img-container').forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        el.style.transition = "all 0.8s ease-out";
         observer.observe(el);
     });
 
-    // Barra de Progreso de Scroll
-    const scrollProgress = document.getElementById('scroll-progress');
-    if (scrollProgress) {
-        window.addEventListener('scroll', () => {
-            const totalScroll = document.documentElement.scrollTop;
-            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scroll = `${(totalScroll / windowHeight) * 100}%`;
-            scrollProgress.style.width = scroll;
+    // Añadir clase para activar la animación
+    document.addEventListener('scroll', () => {
+        document.querySelectorAll('.animate-in').forEach(el => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
         });
-    }
+    });
 
-    // Lógica de Traducción (Español / Inglés)
+    // 2. Barra de progreso de lectura
+    const scrollProgress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / height) * 100;
+        if (scrollProgress) scrollProgress.style.width = `${scrolled}%`;
+    });
+
+    // 3. Máquina de escribir (Typewriter) bilingüe
+    const typewriterElement = document.getElementById('typewriter');
     const langToggle = document.getElementById('lang-toggle');
     const langText = document.getElementById('lang-text');
-    let currentLang = 'es'; 
-
-    const typewriterDict = {
-        es: ["Full Stack Developer", "Especialista en Ciberseguridad", "Entusiasta de Cloud & AWS"],
-        en: ["Full Stack Developer", "Cybersecurity Specialist", "Cloud & AWS Enthusiast"]
+    
+    let currentLang = 'es';
+    const phrases = {
+        es: ["Full Stack Developer", "Especialista en Ciberseguridad", "Entusiasta de Cloud & AWS", "Resolutor de Problemas"],
+        en: ["Full Stack Developer", "Cybersecurity Specialist", "Cloud & AWS Enthusiast", "Problem Solver"]
     };
 
-    let words = typewriterDict[currentLang];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
 
+    function type() {
+        const currentPhrases = phrases[currentLang];
+        const currentFullText = currentPhrases[phraseIndex];
+
+        if (isDeleting) {
+            typewriterElement.textContent = currentFullText.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50;
+        } else {
+            typewriterElement.textContent = currentFullText.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentFullText.length) {
+            isDeleting = true;
+            typeSpeed = 2000; // Pausa al final
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % currentPhrases.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    // Iniciar máquina de escribir
+    if (typewriterElement) type();
+
+    // 4. Lógica de cambio de idioma
     if (langToggle) {
         langToggle.addEventListener('click', () => {
             currentLang = currentLang === 'es' ? 'en' : 'es';
-            if (langText) langText.innerText = currentLang === 'es' ? 'EN' : 'ES';
+            langText.textContent = currentLang === 'es' ? 'EN' : 'ES';
 
             document.querySelectorAll('.lang').forEach(el => {
-                el.innerHTML = el.getAttribute(`data-${currentLang}`);
+                const text = el.getAttribute(`data-${currentLang}`);
+                if (text) el.innerHTML = text;
             });
 
-            words = typewriterDict[currentLang];
+            // Reiniciar máquina de escribir para el nuevo idioma
+            phraseIndex = 0;
+            charIndex = 0;
+            isDeleting = false;
         });
     }
-
-    // Efecto Máquina de Escribir
-    const typeWriterElement = document.getElementById('typewriter');
-    if (typeWriterElement) {
-        let i = 0;
-        
-        function typingEffect() {
-            if (i >= words.length) i = 0; 
-            
-            let word = words[i].split("");
-            var loopTyping = function() {
-                if (word.length > 0) {
-                    typeWriterElement.innerHTML += word.shift();
-                } else {
-                    setTimeout(deletingEffect, 2000);
-                    return false;
-                }
-                setTimeout(loopTyping, 100);
-            };
-            loopTyping();
-        }
-
-        function deletingEffect() {
-            let word = typeWriterElement.innerHTML.split("");
-            var loopDeleting = function() {
-                if (word.length > 0) {
-                    word.pop();
-                    typeWriterElement.innerHTML = word.join("");
-                } else {
-                    i++;
-                    if (i >= words.length) i = 0;
-                    setTimeout(typingEffect, 500);
-                    return false;
-                }
-                setTimeout(loopDeleting, 50);
-            };
-            loopDeleting();
-        }
-
-        typingEffect();
-    }
-
-    console.log("Portafolio Bilingüe de Juan Villa Crisosto cargado correctamente.");
 });
