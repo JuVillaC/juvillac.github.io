@@ -182,9 +182,9 @@ h1.display-2 {
     overflow: hidden;
 }
 
-/* Las Tarjetas de Habilidades (Estilo Nicole) */
+/* Las Tarjetas de Habilidades - ACTUALIZADAS */
 .skill-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(200, 205, 215, 0.15); /* Gris claro semi-transparente */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 20px;
@@ -212,7 +212,7 @@ h1.display-2 {
 
 /* Efectos al pasar el mouse */
 .skill-card:hover {
-    background: rgba(13, 110, 253, 0.1);
+    background: rgba(13, 110, 253, 0.15); /* Se ilumina en azul al pasar el mouse */
     border-color: var(--accent-color);
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(13, 110, 253, 0.2);
@@ -222,18 +222,11 @@ h1.display-2 {
     transform: translateY(-5px);
 }
 
-/* Resaltado especial para Ciberseguridad */
-.highlight-security {
-    background: rgba(13, 110, 253, 0.2);
-    border-color: var(--accent-color);
-}
-.highlight-security i { color: var(--accent-color); }
-
 /* Colores de íconos */
 .text-orange { color: #f06529; }
 .text-purple { color: #7952b3; }
 
-/* Personaje en la esquina (como el oso/niña de Nicole) */
+/* Personaje en la esquina */
 .skills-character {
     position: absolute;
     bottom: -10px;
