@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Animación de entrada
+    // Animación de entrada con Intersection Observer
     const elementsToAnimate = document.querySelectorAll('.project-card, .skill-box, .profile-img-container');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
             const totalScroll = document.documentElement.scrollTop;
             const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scroll = `${totalScroll / windowHeight * 100}%`;
+            const scroll = `${(totalScroll / windowHeight) * 100}%`;
             scrollProgress.style.width = scroll;
         });
     }
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lógica de Traducción (Español / Inglés)
     const langToggle = document.getElementById('lang-toggle');
     const langText = document.getElementById('lang-text');
-    let currentLang = 'es'; // Idioma por defecto
+    let currentLang = 'es'; 
 
     const typewriterDict = {
         es: ["Full Stack Developer", "Especialista en Ciberseguridad", "Entusiasta de Cloud & AWS"],
@@ -40,29 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let words = typewriterDict[currentLang];
 
-    langToggle.addEventListener('click', () => {
-        // Alternar idioma
-        currentLang = currentLang === 'es' ? 'en' : 'es';
-        // Cambiar el texto del botón al idioma contrario para indicar la opción
-        langText.innerText = currentLang === 'es' ? 'EN' : 'ES';
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            if (langText) langText.innerText = currentLang === 'es' ? 'EN' : 'ES';
 
-        // Reemplazar todos los textos con clase 'lang'
-        document.querySelectorAll('.lang').forEach(el => {
-            el.innerHTML = el.getAttribute(`data-${currentLang}`);
+            document.querySelectorAll('.lang').forEach(el => {
+                el.innerHTML = el.getAttribute(`data-${currentLang}`);
+            });
+
+            words = typewriterDict[currentLang];
         });
-
-        // Actualizar palabras del Typewriter
-        words = typewriterDict[currentLang];
-    });
+    }
 
     // Efecto Máquina de Escribir
     const typeWriterElement = document.getElementById('typewriter');
     if (typeWriterElement) {
         let i = 0;
-        let timer;
         
         function typingEffect() {
-            // Se asegura de que si se cambió de idioma y el array es más corto, no se rompa
             if (i >= words.length) i = 0; 
             
             let word = words[i].split("");
@@ -73,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(deletingEffect, 2000);
                     return false;
                 }
-                timer = setTimeout(loopTyping, 100);
+                setTimeout(loopTyping, 100);
             };
             loopTyping();
         }
@@ -90,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(typingEffect, 500);
                     return false;
                 }
-                timer = setTimeout(loopDeleting, 50);
+                setTimeout(loopDeleting, 50);
             };
             loopDeleting();
         }
