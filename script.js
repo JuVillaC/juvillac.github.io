@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Animaciones de aparición al hacer scroll
+    // Animaciones de aparición al hacer scroll
     const observerOptions = {
         threshold: 0.1
     };
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Barra de progreso de lectura
+    // Barra de progreso de lectura
     const scrollProgress = document.getElementById('scroll-progress');
     window.addEventListener('scroll', () => {
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (scrollProgress) scrollProgress.style.width = `${scrolled}%`;
     });
 
-    // 3. Máquina de escribir (Typewriter) bilingüe
+    // Máquina de escribir (Typewriter) bilingüe
     const typewriterElement = document.getElementById('typewriter');
     const langToggle = document.getElementById('lang-toggle');
     const langText = document.getElementById('lang-text');
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Iniciar máquina de escribir
     if (typewriterElement) type();
 
-    // 4. Lógica de cambio de idioma
+    // Lógica de cambio de idioma
     if (langToggle) {
         langToggle.addEventListener('click', () => {
             currentLang = currentLang === 'es' ? 'en' : 'es';
@@ -99,4 +99,25 @@ document.addEventListener('DOMContentLoaded', () => {
             isDeleting = false;
         });
     }
+});
+
+// Efecto sutil de inclinación en las skills
+document.querySelectorAll('.skill-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 10;
+        const rotateY = (centerX - x) / 10;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+    });
 });
