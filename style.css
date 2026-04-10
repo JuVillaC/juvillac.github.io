@@ -162,7 +162,7 @@ h1.display-2 {
 
 .bg-darker { background-color: var(--bg-darker); }
 
-/* Título estilo Pixel/Hacker */
+/* Título estilo Pixel/Hacker Unificado */
 .section-title-pixel {
     font-family: 'Courier New', Courier, monospace;
     font-size: 2.5rem;
@@ -170,7 +170,7 @@ h1.display-2 {
     color: var(--accent-color);
     text-shadow: 3px 3px 0px rgba(13, 110, 253, 0.3);
     margin-bottom: 2rem;
-    text-align: left;
+    text-transform: uppercase;
 }
 
 /* Contenedor principal de Skills */
