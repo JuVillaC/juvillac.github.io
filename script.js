@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.project-card, .skill-box, .section-title, .profile-img-container').forEach(el => {
+    document.querySelectorAll('.project-card, .skill-box, .section-title-pixel, .profile-img-container').forEach(el => {
         el.style.opacity = "0";
         el.style.transform = "translateY(30px)";
         el.style.transition = "all 0.8s ease-out";
@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let currentLang = 'es';
     const phrases = {
-        es: ["Full Stack Developer", "Especialista en Ciberseguridad", "Entusiasta de Cloud & AWS", "Resolutor de Problemas"],
-        en: ["Full Stack Developer", "Cybersecurity Specialist", "Cloud & AWS Enthusiast", "Problem Solver"]
+        es: ["Full_Stack_Developer", "Especialista_Ciberseguridad", "Entusiasta_Cloud_&_AWS", "Ejecutando_scripts..."],
+        en: ["Full_Stack_Developer", "Cybersecurity_Specialist", "Cloud_&_AWS_Enthusiast", "Running_scripts..."]
     };
 
     let phraseIndex = 0;
@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isDeleting) {
             typewriterElement.textContent = currentFullText.substring(0, charIndex - 1);
             charIndex--;
-            typeSpeed = 50;
+            typeSpeed = 40; // Borrado rápido estilo terminal
         } else {
             typewriterElement.textContent = currentFullText.substring(0, charIndex + 1);
             charIndex++;
-            typeSpeed = 100;
+            typeSpeed = 80;
         }
 
         if (!isDeleting && charIndex === currentFullText.length) {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % currentPhrases.length;
-            typeSpeed = 500;
+            typeSpeed = 400;
         }
 
         setTimeout(type, typeSpeed);
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Efecto sutil de inclinación en las skills
+// Efecto sutil de inclinación magnética en las skills
 document.querySelectorAll('.skill-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
