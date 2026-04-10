@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fondo -->
+  <rect width="100" height="100" fill="#020617"></rect>
+
+  <!-- Efecto neón -->
+  <defs>
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Texto -->
+  <text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" font-family="monospace" font-size="30" fill="#22c55e" filter="url(#neon-glow)">
+    &lt;JV/&gt;
+  </text>
+</svg>
