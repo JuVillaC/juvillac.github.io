@@ -302,10 +302,3 @@ body {
     pointer-events: none;
     transform: rotate(-10deg);
 }
-
-/* Estilo para el nuevo logo de neón <JV/> */
-.jv-logo {
-    width: 40px; /* Ajusta el tamaño según prefieras */
-    height: 40px;
-    filter: drop-shadow(0 0 5px var(--accent-color)); /* Resplandor de neón verde */
-}
