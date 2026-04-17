@@ -15,9 +15,12 @@ Cuento con una formación sólida en el ecosistema de **Java y Python**, orienta
 ## 📂 Proyectos Destacados
 Presentación de soluciones técnicas que reflejan mi crecimiento y dominio de herramientas modernas:
 
-* **Alke-Wallet Application:** Una solución Fintech orientada a la gestión financiera con altos estándares de integridad.
-* **SpringEdu Manager:** Sistema de gestión académica que implementa protocolos avanzados de autenticación y seguridad.
-* **Biblioteca Digital Untec:** Aplicación centrada en la lógica de persistencia y la arquitectura de objetos en Java.
+* **CL-Prog 2027:** Interfaz interactiva para festivales con modales dinámicos y lógica de preventas en JavaScript para optimizar la experiencia de usuario.
+Desplegada en GitHub Pages (por el momento), permite validar flujos de compra complejos y navegación fluida mediante un diseño responsivo y moderno.
+* **Ticketera (en proceso):** Sistema de gestión con API REST en Java que integra un dashboard administrativo para el monitoreo de ventas en tiempo real.
+Ofrece interfaces funcionales para múltiples roles de usuario y automatiza la generación de tickets digitales mediante códigos QR.
+* **Alke Wallet:** Plataforma Fintech Full Stack orientada a la integridad transaccional con validaciones de seguridad en el frontend y baja latencia.
+Desarrollada bajo el patrón MVC, asegura una navegación intuitiva y protección robusta en el manejo de datos financieros críticos.
 
 ---
 
