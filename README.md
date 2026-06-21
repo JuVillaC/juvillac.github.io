@@ -3,7 +3,7 @@
 Bienvenido a mi espacio profesional. Soy un desarrollador enfocado en la construcción de soluciones tecnológicas integrales, combinando la robustez del desarrollo **Full Stack** con una visión analítica en **Ciberseguridad y Telecomunicaciones**. Mi objetivo es desarrollar software que no solo sea funcional, sino también seguro y eficiente desde su arquitectura.
 
 ## 🔗 Portafolio en Vivo
-👉 **[EXPLORA MI PORTAFOLIO DIGITAL AQUÍ](https://juvillac.github.io/)**
+👉 **[EXPLORA MI PORTAFOLIO DIGITAL AQUÍ](https://humanwebdesign.github.io)**
 
 ---
 
@@ -40,7 +40,7 @@ Mantengo un análisis constante de mi evolución profesional para asegurar que m
 
 ## ✉️ Contacto
 * **LinkedIn:** [juanvillacrisosto](https://www.linkedin.com/in/juanvillacrisosto)
-* **GitHub:** [JuVillaC](https://github.com/JuVillaC)
+* **GitHub:** [HumanWebDesign](https://github.com/HumanWebDesign)
 
 ---
 *Comprometido con la excelencia técnica y el desarrollo de soluciones digitales seguras.*
